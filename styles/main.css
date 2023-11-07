@@ -41,9 +41,11 @@ body {
   padding: 0 15px;
   width: 100%;
 }
+
 .wrap {
   flex-wrap: wrap;
 }
+
 .justify-content-between {
   justify-content: space-between;
 }
@@ -63,12 +65,15 @@ body {
 .gap {
   gap: 70px;
 }
+
 .logo-items {
   max-width: 128px;
 }
+
 .pad-bot {
   padding-bottom: 20px;
 }
+
 .pad-bot2 {
   padding-bottom: 14px;
 }
@@ -453,19 +458,18 @@ body {
 /* sections cards -2 */
 
 .section-cards-2 {
-  min-height: 998px;
+  padding-bottom: 187px;
+  padding-top: 154px;
 }
 
 .container-section-cards-2 {
   width: 100%;
   gap: 25px;
-  margin-bottom: 120px;
 }
 
 .title-cards-2 {
   max-width: 1287px;
   width: 100%;
-  margin-top: 154px;
 }
 
 .cards-2 {
@@ -529,7 +533,7 @@ body {
 }
 
 .signature {
-  width: 895px;
+  max-width: 895px;
   padding-bottom: 15px;
   align-items: flex-start;
   gap: 7px;
