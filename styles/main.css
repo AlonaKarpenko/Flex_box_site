@@ -62,8 +62,8 @@ body {
   align-items: center;
 }
 
-.gap {
-  gap: 70px;
+.footer-section-1 {
+  padding-right: 140px;
 }
 
 .logo-items {
@@ -657,7 +657,6 @@ body {
 }
 
 .box-footer {
-  gap: 34px;
   max-width: 850px;
   width: 100%;
 }
@@ -671,6 +670,7 @@ body {
 
 .pad-link-3 {
   padding: 21px 11px 0px 0px;
+  max-width: 176px;
 }
 
 .border-footer {
