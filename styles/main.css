@@ -67,7 +67,7 @@ body {
 }
 
 .logo-items {
-  max-width: 128px;
+  max-width: 150px;
 }
 
 .pad-bot {
@@ -115,10 +115,8 @@ body {
   gap: 10px;
 }
 .buttons-1 {
-  display: inline-flex;
-  align-items: flex-start;
   gap: 10px;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .button1 {
@@ -361,11 +359,11 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 39.984px;
-  flex-wrap: wrap;
 }
 .main-content {
   padding-top: 18px;
   max-width: 620px;
+  width: 100%;
 }
 
 /* section 1 */
@@ -564,6 +562,10 @@ body {
   max-width: 809px;
 }
 
+.gap-cake {
+  gap: 70px;
+}
+
 /* sections tools */
 .container-section-tools {
   max-width: 1290px;
@@ -659,6 +661,7 @@ body {
 .box-footer {
   max-width: 850px;
   width: 100%;
+  gap: 10px;
 }
 
 .pad-link-1 {
@@ -697,4 +700,7 @@ body {
   margin-bottom: 43px;
   max-width: 1290px;
   width: 100%;
+}
+.div-gap {
+  gap: 5px;
 }
