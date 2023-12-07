@@ -1,6 +1,13 @@
+@use "sass:math";
+$grid-col-count: 8;
+$grid-col-size: math.div(100%, 8);
+$space-row: 15px;
 $sm: 576px;
 $md: 768px;
-$lg: 992px;
+$lg: 991px;
+$xl: 1200px;
+$xxl: 1328px;
+
 
 * {
     margin: 0;
@@ -339,9 +346,14 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 60px;
+    text-align: center;
+    @media (min-width: $md) and (min-width: $xxl) {
+        text-align: start;
+    }
     @media (min-width: $sm) {
 font-size: 50px;
     }
+
 
 }
 
@@ -431,14 +443,13 @@ font-size: 50px;
     padding-bottom: 25px;
     max-width: 1290px;
     padding-top: 18px;
-    justify-content: flex-start;
-    align-items: flex-start;
     gap: 15px;
    @media (min-width: $md) and (min-width: $lg) {
     margin-top: 97px;
     padding-bottom: 145px;
     gap: 39.984px;
-    justify-content: center;
+    width: 100%;
+    max-width: 1290px;
    }
 }
 
@@ -489,9 +500,13 @@ font-size: 50px;
     margin-bottom: 50px;
     gap: 20px;
     width: 100%;
-    @media (min-width: $md) and (min-width: $lg) {
+    justify-content: center;
+    @media (min-width: $md) and (min-width: $xl) {
         margin-top: 100px;
         margin-bottom: 250px;
+        max-width: 1290px;
+        width: 100%;
+        justify-content: space-between;
     }
 }
 
@@ -501,9 +516,14 @@ font-size: 50px;
     margin-bottom: 50px;
     gap: 20px;
     width: 100%;
-    @media (min-width: $md) and (min-width: $lg) {
+    justify-content: center;
+    @media (min-width: $md) and (min-width: $xl) {
             margin-top: 100px;
             margin-bottom: 250px;
+            max-width: 1290px;
+            width: 100%;
+            gap: 20px;
+            justify-content: space-between;
         }
 }
 
@@ -585,6 +605,10 @@ font-size: 50px;
 .container-section-cards-2 {
     width: 100%;
     gap: 25px;
+    justify-content: center;
+    @media (min-width: $md) and (min-width: $xxl) {
+        justify-content: space-between;
+    }
 }
 
 .title-cards-2 {
@@ -595,8 +619,17 @@ font-size: 50px;
 .cards-2 {
     gap: 15px;
     max-width: 1290px;
+    justify-content: center;
+    flex-direction: column;
+    @media (min-width: $md) and (min-width: $xxl) {
+        gap: 31px;
+        max-width: 1290px;
+        
+    }
     @media (min-width: $md) and (min-width: $lg) {
         gap: 31px;
+        max-width: 1290px;
+        flex-direction: row;
     }
 }
 
@@ -649,10 +682,14 @@ font-size: 50px;
     gap: 40px;
     padding-top: 20px;
     padding-bottom: 35px;
+    justify-content: center;
     @media (min-width: $md) and (min-width: $lg) {
         gap: 85px;
             padding-top: 53px;
             padding-bottom: 105px;
+    }
+    @media (min-width: $xxl) {
+        justify-content: space-between;
     }
 }
 
@@ -697,12 +734,14 @@ font-size: 50px;
     max-width: 1290px;
     width: 100%;
     gap: 10px;
-    justify-content: flex-start;
+    justify-content: center;
     @media (min-width: $md) and (min-width: $lg) {
         padding-top: 69px;
-            padding-bottom: 80px;
-            justify-content: space-between;
+            padding-bottom: 80px;      
     }
+        @media (min-width: $xl) {
+justify-content: space-between;
+        }
 }
 .cake-img {
     max-width: 176px;
@@ -808,14 +847,19 @@ padding-top: 169px;
     max-width: 1290px;
     width: 100%;
     padding-top: 30px;
+    justify-content: center;
+    gap: 20px;
     @media (min-width: $md) and (min-width: $lg) {
         padding-top: 97px;
+    }
+    @media (min-width: $xxl) {
+        justify-content: space-between;
     }
 }
 
 .footer-section-1 {
     padding-right: 30px;
-    @media (min-width: $md) and (min-width: $lg) {
+    @media (min-width: $md) and (min-width: $xxl) {
         padding-right: 140px;
     }
 }
@@ -852,7 +896,26 @@ padding-top: 169px;
 .box-footer {
     max-width: 850px;
     width: 100%;
-    gap: 15px;
+    margin: 0 -#{$space-row} 0;
+  flex-wrap: wrap;
+  justify-content: center;
+    @media (min-width: $xl) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+.col {
+    flex: 1 0 auto;
+    padding: $space-row $space-row 0;
+}
+
+@for $i from 1 through $grid-col-count {
+    .col-#{$i} {
+        flex: 0 0 auto;
+        width: $grid-col-size * $i;
+        padding: $space-row $space-row 0;
+    }
 }
 
 .pad-link-1 {
@@ -880,6 +943,8 @@ padding-top: 169px;
     }
 }
 
+
+
 .parag-width {
     max-width: 301px;
     width: 100%;
@@ -906,4 +971,44 @@ padding-top: 169px;
 
 .div-gap {
     gap: 5px;
+}
+
+
+
+@media screen and (min-width: $sm) {
+    @for $i from 1 through $grid-col-count {
+        .col-sm-#{$i} {
+            flex: 0 0 auto;
+            width: $grid-col-size * $i;
+            padding: $space-row $space-row 0;
+        }
+    }
+}
+@media screen and (min-width: $md) {
+    @for $i from 1 through $grid-col-count {
+        .col-md-#{$i} {
+            flex: 0 0 auto;
+            width: $grid-col-size * $i;
+            padding: $space-row $space-row 0;
+        }
+    }
+}
+@media screen and (min-width: $lg) {
+    @for $i from 1 through $grid-col-count {
+        .col-lg-#{$i} {
+            flex: 0 0 auto;
+            width: $grid-col-size * $i;
+            padding: $space-row $space-row 0;
+        }
+    }
+}
+
+@media screen and (min-width: $xl) {
+    @for $i from 1 through $grid-col-count {
+        .col-xl-#{$i} {
+            flex: 0 0 auto;
+            width: $grid-col-size * $i;
+            padding: $space-row $space-row 0;
+        }
+    }
 }
