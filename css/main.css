@@ -1,7 +1,12 @@
 @font-face {
   font-family: "Graphik LCG";
   src: url("../assets/fonts/graphikLCG/GraphikLCG-Regular.eot");
-  src: url("../assets/fonts/graphikLCG/?#iefix") format("embedded-opentype"), url("../assets/fonts/graphikLCG/GraphikLCG-Regular.woff2") format("woff2"), url("../assets/fonts/graphikLCG/GraphikLCG-Regular.woff") format("woff"), url("../assets/fonts/graphikLCG/GraphikLCG-Regular.ttf") format("truetype"), url("../assets/fonts/graphikLCG/GraphikLCG-Regular.svg#GraphikLCG-Regular") format("svg");
+  src: url("../assets/fonts/graphikLCG/?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/graphikLCG/GraphikLCG-Regular.woff2") format("woff2"),
+    url("../assets/fonts/graphikLCG/GraphikLCG-Regular.woff") format("woff"),
+    url("../assets/fonts/graphikLCG/GraphikLCG-Regular.ttf") format("truetype"),
+    url("../assets/fonts/graphikLCG/GraphikLCG-Regular.svg#GraphikLCG-Regular")
+      format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -9,7 +14,12 @@
 @font-face {
   font-family: "Graphik LCG";
   src: url("../assets/fonts/graphikLCG/GraphikLCG-Semibold.eot");
-  src: url("../assets/fonts/graphikLCG/?#iefix") format("embedded-opentype"), url("../assets/fonts/graphikLCG/GraphikLCG-Semibold.woff2") format("woff2"), url("../assets/fonts/graphikLCG/GraphikLCG-Semibold.woff") format("woff"), url("../assets/fonts/graphikLCG/GraphikLCG-Semibold.ttf") format("truetype"), url("../assets/fonts/graphikLCG/GraphikLCG-Semibold.svg#GraphikLCG-Semibold") format("svg");
+  src: url("../assets/fonts/graphikLCG/?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/graphikLCG/GraphikLCG-Semibold.woff2") format("woff2"),
+    url("../assets/fonts/graphikLCG/GraphikLCG-Semibold.woff") format("woff"),
+    url("../assets/fonts/graphikLCG/GraphikLCG-Semibold.ttf") format("truetype"),
+    url("../assets/fonts/graphikLCG/GraphikLCG-Semibold.svg#GraphikLCG-Semibold")
+      format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -129,13 +139,13 @@ body {
   max-width: 632px;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .img1 {
   max-width: 630px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -596,10 +606,12 @@ body {
 
 .cards {
   gap: 20px;
+  justify-content: center;
 }
 @media (min-width: 768px) and (min-width: 991px) {
   .cards {
     gap: 110px;
+    justify-content: space-between;
   }
 }
 
@@ -807,10 +819,12 @@ body {
 .cake-gap {
   gap: 15px;
   max-width: 809px;
+  justify-content: center;
 }
 @media (min-width: 768px) and (min-width: 991px) {
   .cake-gap {
     gap: 67px;
+    justify-content: space-between;
   }
 }
 
@@ -1259,4 +1273,4 @@ body {
     width: 100%;
     padding: 15px 15px 0;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
